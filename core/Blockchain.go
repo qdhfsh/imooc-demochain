@@ -1,4 +1,4 @@
-package demochain 
+package core
 
 import (
 	"log"
@@ -29,6 +29,7 @@ func (bc *Blockchain) Print() {
 		fmt.Printf("Curr.Hash: %s\n", block.Hash)
 		fmt.Printf("Data: %s\n", block.Data)
 		fmt.Printf("Timestamp: %s\n", block.Timestamp)
+		fmt.Println()
 	}
 }
 

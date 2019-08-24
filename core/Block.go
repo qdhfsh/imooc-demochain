@@ -1,4 +1,4 @@
-package demochain
+package core
 
 import (
 	"crypto/sha256"
@@ -26,6 +26,7 @@ func GenerateNewBlock(preBlock Block, data string) Block {
 	newBlock.Index = preBlock.Index + 1
 	newBlock.PrevBlockHash = preBlock.Hash
 	newBlock.Timestamp = time.Now().Unix()
+	newBlock.Data = data
 	newBlock.Hash = calculateHash(newBlock)
 	return newBlock
 }
